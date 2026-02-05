@@ -38,7 +38,7 @@ interface AboutSection {
   subtitle: string;
   content: string;
   theme: ThemeType;
-  icon: React.ElementType;
+  icon: any;
 }
 
 const aboutData: AboutSection[] = [

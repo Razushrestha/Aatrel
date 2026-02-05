@@ -251,7 +251,7 @@ export default function Services() {
 
                   {/* Biomass -> Converter */}
                   <circle r="3" fill="#fff">
-                     <animateMotion path="M 1060,350 L 1100,350" dur="1s" repeatCount="indefinite" delay="0.5s" />
+                     <animateMotion path="M 1060,350 L 1100,350" dur="1s" repeatCount="indefinite" begin="0.5s" />
                   </circle>
                </svg>
 
@@ -534,16 +534,16 @@ export default function Services() {
                         <path d="M 900,480 L 1000,480 L 1000,530" stroke="#f97316" strokeWidth="2" markerEnd="url(#arrow-orange)" fill="none" strokeLinejoin="round" />
 
                         {/* 12. Wastes -> Products */}
-                        {/* Liq -> Stim (800, 680) */}
-                        <path d="M 800,590 L 800,660" stroke="#84cc16" strokeWidth="2" markerEnd="url(#arrow-green)" />
-                        {/* Sol -> Fert (1000, 680) */}
-                        <path d="M 1000,590 L 1000,660" stroke="#84cc16" strokeWidth="2" markerEnd="url(#arrow-green)" />
+                        {/* Liq -> Stim (800, 750) */}
+                        <path d="M 800,590 L 800,710" stroke="#84cc16" strokeWidth="2" markerEnd="url(#arrow-green)" />
+                        {/* Sol -> Fert (1000, 750) */}
+                        <path d="M 1000,590 L 1000,710" stroke="#84cc16" strokeWidth="2" markerEnd="url(#arrow-green)" />
 
                         {/* 13. Gas Chain (1200) - FAR RIGHT */}
                         {/* Raw (1200, 400) -> CNG (1200, 560) */}
                         <path d="M 1200,440 L 1200,530" stroke="#3b82f6" strokeWidth="2" markerEnd="url(#arrow-blue)" />
-                        {/* CNG -> Elec (1200, 720) */}
-                        <path d="M 1200,590 L 1200,680" stroke="#15803d" strokeWidth="2" markerEnd="url(#arrow-green)" />
+                        {/* CNG -> Elec (1200, 750) */}
+                        <path d="M 1200,590 L 1200,710" stroke="#15803d" strokeWidth="2" markerEnd="url(#arrow-green)" />
 
 
                         {/* --- ANIMATIONS (Flowing Particles on Every Line) --- */}
@@ -613,16 +613,16 @@ export default function Services() {
 
                         {/* 7. Final Products */}
                         <circle r="4" fill="#84cc16">
-                            <animateMotion path="M 800,590 L 800,660" dur="1.5s" repeatCount="indefinite" />
+                            <animateMotion path="M 800,590 L 800,710" dur="1.5s" repeatCount="indefinite" />
                         </circle>
                         <circle r="4" fill="#84cc16">
-                            <animateMotion path="M 1000,590 L 1000,660" dur="1.5s" repeatCount="indefinite" />
+                            <animateMotion path="M 1000,590 L 1000,710" dur="1.5s" repeatCount="indefinite" />
                         </circle>
                         <circle r="4" fill="#3b82f6">
                             <animateMotion path="M 1200,440 L 1200,530" dur="2s" repeatCount="indefinite" />
                         </circle>
                         <circle r="4" fill="#15803d">
-                            <animateMotion path="M 1200,590 L 1200,680" dur="2s" repeatCount="indefinite" />
+                            <animateMotion path="M 1200,590 L 1200,710" dur="2s" repeatCount="indefinite" />
                         </circle>
                     </svg>
 
@@ -682,23 +682,23 @@ export default function Services() {
                         SOLID WASTE
                     </div>
 
-                    {/* WASTES PRODUCTS (Y=700) */}
-                    <div className="absolute left-[800px] top-[700px] -translate-x-1/2 -translate-y-1/2 w-[140px] bg-green-800 text-white py-3 rounded-lg text-xs font-bold text-center shadow-md z-10">
+                    {/* WASTES PRODUCTS (Y=750) - LOWERED to ALIGN */}
+                    <div className="absolute left-[800px] top-[750px] -translate-x-1/2 -translate-y-1/2 w-[140px] bg-green-800 text-white py-3 rounded-lg text-xs font-bold text-center shadow-md z-10">
                         BIO STIMULANT
                     </div>
-                    <div className="absolute left-[1000px] top-[700px] -translate-x-1/2 -translate-y-1/2 w-[140px] bg-green-800 text-white py-3 rounded-lg text-xs font-bold text-center shadow-md z-10">
+                    <div className="absolute left-[1000px] top-[750px] -translate-x-1/2 -translate-y-1/2 w-[140px] bg-green-800 text-white py-3 rounded-lg text-xs font-bold text-center shadow-md z-10">
                         BIO FERTILIZER
                     </div>
 
 
                     {/* COL 7: ENERGY (X=1200) - Pushed Far Right */}
-                    <div className="absolute left-[1200px] top-[400px] -translate-x-1/2 -translate-y-1/2 w-[120px] bg-blue-700 text-white py-3 rounded-lg text-[10px] font-bold text-center shadow-lg border border-blue-500 z-10">
+                    <div className="absolute left-[1200px] top-[400px] -translate-x-1/2 -translate-y-1/2 w-[120px] bg-blue-700 text-white py-3 rounded-lg text-xs font-bold text-center shadow-lg border border-blue-500 z-10">
                         RAW GAS PURIF.
                     </div>
                     <div className="absolute left-[1200px] top-[560px] -translate-x-1/2 -translate-y-1/2 w-[120px] bg-green-900 text-white py-3 rounded-lg text-xs font-bold text-center shadow-lg z-10">
                         CNG
                     </div>
-                    <div className="absolute left-[1200px] top-[720px] -translate-x-1/2 -translate-y-1/2 w-[120px] bg-brand-deep text-white py-4 rounded-xl text-sm font-bold text-center shadow-xl border-t-4 border-brand-green z-20">
+                    <div className="absolute left-[1200px] top-[750px] -translate-x-1/2 -translate-y-1/2 w-[140px] bg-brand-deep text-white py-4 rounded-xl text-sm font-bold text-center shadow-xl border-t-4 border-brand-green z-20 whitespace-nowrap">
                         ELECTRICITY
                     </div>
 
