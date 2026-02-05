@@ -25,19 +25,32 @@ export default function Footer() {
 
         {/* Legal Column */}
         <div>
-          <h3 className="mb-4 font-semibold font-heading text-lg">Legal</h3>
-          <ul className="space-y-2 text-sm text-gray-300">
-            <li>CIN: U74999TN2020PTC139999</li>
-            <li>GST: 33AACTD9999D1Z9</li>
-            <li>DPIIT: DIPP99999</li>
+          <h3 className="mb-4 font-semibold font-heading text-lg">Legal Identity</h3>
+          <ul className="space-y-2 text-xs text-gray-300 font-mono">
+            <li><span className="text-gray-500">CIN:</span> U35106TN2023PTC160122</li>
+            <li><span className="text-gray-500">GST:</span> 33AAYCA6416F1ZJ</li>
+            <li><span className="text-gray-500">PAN:</span> AAYCA6416F</li>
+            <li><span className="text-gray-500">DPIIT:</span> DIPP144531</li>
           </ul>
         </div>
         
         {/* Contact Column */}
-        <div>
+        <div className="col-span-1 md:col-span-1">
              <h3 className="mb-4 font-semibold font-heading text-lg">Contact</h3>
-             <p className="text-sm text-gray-300">info@aatrel.com</p>
-             <p className="text-sm text-gray-300 mt-2">IITM Research Park, Chennai, India</p>
+             <div className="space-y-4 text-sm text-gray-300">
+               <div>
+                  <p className="font-semibold text-white mb-1">Email</p>
+                  <a href="mailto:sreeraam@aatrel.in" className="block hover:text-brand-green">sreeraam@aatrel.in</a>
+                  <a href="mailto:admin@aatrel.in" className="block hover:text-brand-green">admin@aatrel.in</a>
+               </div>
+               
+               <div>
+                 <p className="font-semibold text-white mb-1">Registered Office</p>
+                 <p className="text-xs leading-relaxed opacity-80">
+                   Cabin #6, Bio Incubator C5-02, C Block 5th Floor, IITM Research Park, Taramani, Chennai, TN 600113.
+                 </p>
+               </div>
+             </div>
         </div>
       </div>
 

@@ -49,6 +49,17 @@ export default function CoreApproach() {
             />
           </div>
 
+          {/* Connector Line (Mobile) */}
+          <div className="absolute top-0 bottom-0 left-1/2 hidden w-[2px] -translate-x-1/2 bg-brand-grey max-md:block">
+            <motion.div
+               initial={{ scaleY: 0, originY: 0 }}
+               whileInView={{ scaleY: 1 }}
+               viewport={{ once: true }}
+               transition={{ duration: 1.5, ease: "easeInOut" }}
+               className="h-full w-full bg-brand-green/30"
+            />
+          </div>
+
           {steps.map((step, index) => (
             <motion.div
               key={step.id}
@@ -56,7 +67,7 @@ export default function CoreApproach() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.4, duration: 0.6 }}
-              className="relative z-10 flex flex-1 flex-col items-center text-center group"
+              className="relative z-10 flex flex-1 flex-col items-center text-center group bg-brand-white py-4 w-full md:w-auto md:bg-transparent"
             >
               <div className="mb-6 flex h-24 w-24 items-center justify-center rounded-full border-2 border-brand-grey bg-white transition-colors duration-500 group-hover:border-brand-green shadow-sm">
                 <step.icon className="h-10 w-10 text-brand-deep transition-colors duration-500 group-hover:text-brand-green" />

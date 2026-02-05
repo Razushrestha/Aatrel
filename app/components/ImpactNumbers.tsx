@@ -23,16 +23,16 @@ function Counter({ value, suffix }: { value: number; suffix: string }) {
     }
   }, [inView, value, spring]);
 
-  return <span className="font-mono text-4xl md:text-5xl font-bold text-brand-green tracking-tighter">
+  return <span className="font-mono text-3xl sm:text-4xl md:text-5xl font-bold text-brand-green tracking-tighter">
     <motion.span ref={ref}>{display}</motion.span>{suffix}
   </span>;
 }
 
 export default function ImpactNumbers() {
   return (
-    <section className="bg-brand-grey py-20">
+    <section className="bg-brand-grey py-16 md:py-20">
       <div className="container mx-auto px-6">
-        <div className="grid grid-cols-2 gap-12 md:grid-cols-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 md:grid-cols-4 md:gap-12">
           {metrics.map((metric, index) => (
             <div key={index} className="text-center">
               <div className="mb-2">

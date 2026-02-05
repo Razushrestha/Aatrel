@@ -2,9 +2,10 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import clsx from "clsx";
+import { Menu, X } from "lucide-react";
 
 const navLinks = [
   { name: "Home", href: "/" },
@@ -17,12 +18,13 @@ const navLinks = [
 export default function Navbar() {
   const pathname = usePathname();
   const [hoveredPath, setHoveredPath] = useState(pathname);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-brand-grey bg-brand-white/95 backdrop-blur-sm">
       <div className="container mx-auto flex h-20 items-center justify-between px-6">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2">
+        <Link href="/" className="flex items-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>
           <div className="flex flex-col">
             <h1 className="font-heading text-2xl font-bold tracking-tight text-brand-green">
               AATREL
@@ -59,11 +61,49 @@ export default function Navbar() {
           })}
         </nav>
 
-        {/* Mobile Menu Button (Placeholder) */}
+        {/* Mobile Menu Button */}
         <div className="md:hidden">
-            {/* Simple hamburger can be added here if needed */}
+            <button 
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="p-2 text-brand-deep hover:text-brand-green transition-colors"
+              aria-label="Toggle menu"
+            >
+              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
         </div>
       </div>
+
+      {/* Mobile Menu Overlay */}
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            className="md:hidden overflow-hidden border-b border-brand-grey bg-brand-white"
+          >
+            <nav className="flex flex-col p-6 space-y-4">
+              {navLinks.map((link) => {
+                 const isActive = pathname === link.href;
+                 return (
+                   <Link
+                     key={link.href}
+                     href={link.href}
+                     onClick={() => setIsMobileMenuOpen(false)}
+                     className={clsx(
+                       "text-lg font-medium transition-colors py-2 border-b border-brand-grey/50 last:border-0",
+                       isActive ? "text-brand-green" : "text-brand-text hover:text-brand-green"
+                     )}
+                   >
+                     {link.name}
+                   </Link>
+                 )
+              })}
+            </nav>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 }
