@@ -108,7 +108,7 @@ export default function Services() {
                         animate={{ opacity: 1, x: 0 }}
                         exit={{ opacity: 0, x: -20 }}
                         transition={{ duration: 0.4 }}
-                        className="bg-brand-grey p-8 md:p-12 rounded-2xl h-full border border-white"
+                        className="bg-brand-grey p-8 lg:p-8 xl:p-12 rounded-2xl h-full border border-white"
                     >
                         <div className="flex items-center gap-4 mb-6">
                             <div className="p-3 bg-white rounded-full shadow-sm">

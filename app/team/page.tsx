@@ -149,7 +149,7 @@ export default function Team() {
 
       {/* Desktop Tree View (> 1024px) */}
       <div className="hidden lg:block container mx-auto px-4 overflow-x-auto pb-24">
-        <div className="min-w-[1024px] flex flex-col items-center">
+        <div className="min-w-[1024px] lg:scale-90 xl:scale-100 origin-top flex flex-col items-center transition-transform duration-300">
           
           {/* Level 1: Idea Founder */}
           <div className="mb-12 relative flex flex-col items-center">

@@ -28,7 +28,7 @@ export default function Hero() {
             
             <motion.h1 
                 variants={fadeInUp} 
-                className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-brand-deep text-balance"
+                className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold leading-tight text-brand-deep text-balance"
             >
                 Building Scalable Climate Solutions <br className="hidden lg:block"/>
                 Through Advanced Carbon Technologies
