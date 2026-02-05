@@ -2,13 +2,16 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-brand-deep py-12 text-white font-body">
-      <div className="container mx-auto grid gap-8 px-6 md:grid-cols-4">
+    <footer className="bg-[#051b14] py-16 text-white font-body border-t border-brand-green/10 relative z-50">
+      <div className="container mx-auto grid gap-12 px-6 md:grid-cols-4">
         {/* Brand Column */}
         <div className="col-span-1 md:col-span-1">
-          <h2 className="font-heading text-2xl font-bold text-white mb-4">AATREL</h2>
-          <p className="text-sm text-gray-300 leading-relaxed mb-6">
-            Building scalable climate solutions through advanced carbon technologies.
+          <div className="flex items-center gap-2 mb-6">
+              <div className="w-8 h-8 rounded-full bg-brand-green flex items-center justify-center font-bold text-white">A</div>
+              <h2 className="font-heading text-xl font-bold text-white tracking-wide">AATREL</h2>
+          </div>
+          <p className="text-sm text-gray-400 leading-relaxed max-w-xs">
+            Building scalable climate solutions through advanced carbon technologies. Engineering a sustainable future.
           </p>
         </div>
 
